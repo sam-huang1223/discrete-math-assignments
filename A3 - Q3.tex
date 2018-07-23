@@ -1,0 +1,85 @@
+\documentclass{report}
+    \linespread{1.5}
+    
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    
+    
+    \begin{document}
+    CISC102 - Discrete Math I
+
+    July 2018
+
+    \bigskip
+    
+    Assignment 3 - Problem 3
+    
+    Sam Huang (10175794)
+    \bigskip
+    
+    
+    \centerline{\textbf{Prove that}}
+    
+    $\forall n \geq 1$, 
+    
+    $\frac{1}{1*2}$ + $\frac{1}{2*3}$ + $\frac{1}{3*4}$ + ... + $\frac{1}{n(n+1)}$ = $\frac{n}{n+1}$
+    
+    \bigskip
+    \bigskip
+    
+    \centerline{\textbf{Proof by induction}}
+     
+    \underline{Base Case}: n = 1
+    
+    $\rightarrow \frac{1}{1(1+1)}$ = $\frac{1}{1+1}$
+    
+    $\rightarrow \frac{1}{2}$ = $\frac{1}{2}$
+    
+    \medskip
+    
+    $\therefore LHS = RHS \implies$ the statement is true for the Base Case
+    
+    \bigskip
+    
+    \underline{Inductive Hypothesis}: Assume the statement is true for some integer $k \geq 1$
+    
+    That is, $\frac{1}{1*2}$ + $\frac{1}{2*3}$ + $\frac{1}{3*4}$ + ... + $\frac{1}{k(k+1)}$ = $\frac{k}{k+1}$
+    
+    \medskip
+    
+    Now consider the case where n = k+1 (the next integer) 
+    
+    $\frac{1}{1*2}$ + $\frac{1}{2*3}$ + $\frac{1}{3*4}$ + ... + $\frac{1}{k(k+1)}$ + $\frac{1}{(k+1)(k+1+1)}$ = $\frac{k+1}{k+1+1}$
+    
+    \medskip
+    
+    $\rightarrow (\frac{1}{1*2}$ + $\frac{1}{2*3}$ + $\frac{1}{3*4}$ + ... + $\frac{1}{k(k+1)}$) + $\frac{1}{(k+1)(k+2)}$ = $\frac{k+1}{k+2}$
+    
+    \textit{Here we can substitute the inductive hypothesis for the bracketed section}
+    
+    $\rightarrow \frac{k}{k+1}$ + $\frac{1}{(k+1)(k+2)}$ = $\frac{k+1}{k+2}$
+    
+    \textit{Multiply both sides by (k+1)(k+2)}
+    
+    $\rightarrow k(k+2) + 1 = (k+1)(k+1)$
+    
+    \textit{Expand}
+    
+    $\rightarrow k^{2} +2k + 1 = k^{2} +k +k +1^{2}$
+    
+    \textit{Simplify}
+    
+    $\rightarrow k^{2} +2k + 1 = k^{2} + 2k + 1$
+    
+    $\therefore LHS = RHS \implies$ the Inductive Hypothesis is true
+    
+    \bigskip
+    
+    Putting the Base Case and the Inductive Hypothesis together, we conclude 
+    
+    that the statement $\frac{1}{1*2}$ + $\frac{1}{2*3}$ + $\frac{1}{3*4}$ + ... + $\frac{1}{n(n+1)}$ = $\frac{n}{n+1}$ is true, $\forall n \geq 1$
+    $\blacksquare$ 
+    
+    \end{document}
+    
+    

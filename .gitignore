@@ -1,0 +1,7 @@
+*.gz
+*.aux
+*.fdb_latexmk
+*.log
+*.fls
+
+// these files are related to the Latex Workshop VSCode extension
